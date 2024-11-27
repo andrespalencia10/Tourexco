@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Tourexco{% endblock %}</title>
+    
+    <!-- Cargar el tag de archivos estáticos -->
+    {% load static %}
+    
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Tourexco Inmobiliaria</h1>
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'inmuebles' %}">Inmuebles</a>
+            <a href="{% url 'nosotros' %}">Nosotros</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Bloque para contenido específico -->
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>&copy; 2024 Tourexco Inmobiliaria. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

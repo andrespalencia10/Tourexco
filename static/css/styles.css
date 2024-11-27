@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+main {
+    background-image: url('../images/fondo.jpg'); /* Usando la ruta relativa */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: #003366;
+    color: #f4f4f4;
+    padding: 10px 30px;
+    text-align:left;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+a{
+    color: #f4f4f4;
+}
+
+/* navegación */
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #003366; 
+    padding: 10px 20px; 
+}
+
+header h1 {
+    color: white; 
+    margin: 0; 
+    font-size: 34px; 
+}
+
+header nav {
+    display: flex;
+    gap: 20px; 
+}
+
+header nav a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 20px; 
+}
+
+
+/*   navegación */
+
+h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

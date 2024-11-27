@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto - Tourexco{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/css/contacto.css">
+
+<div class="header-container">
+    <h2>Contáctanos</h2>
+    <p id="contacto_form">¿Tienes preguntas o necesitas ayuda? Envíanos un mensaje.</p> 
+</div>
+
+<div class="form-container">
+    <!-- Formulario de contacto -->
+    <form method="POST">
+        {% csrf_token %}
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="motivo">Motivo:</label><br>
+        <input type="text" id="motivo" name="motivo" required><br><br>
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+{% endblock %}

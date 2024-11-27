@@ -1,0 +1,79 @@
+/* Contenedor específico para el formulario */
+.form-container {
+    display: flex; /* Activa Flexbox */
+    justify-content: column; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura de toda la ventana */
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño */
+}
+
+/* Mantén el resto del estilo del formulario */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limitar el ancho máximo */
+}
+
+form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #004095;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    form h2 {
+        font-size: 1.5rem;
+    }
+
+    form p {
+        font-size: 0.9rem;
+    }
+}
