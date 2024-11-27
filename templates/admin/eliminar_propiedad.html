@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Eliminar Propiedad</h1>
+<p>¿Estás seguro de que deseas eliminar la propiedad <strong>{{ propiedad.titulo }}</strong>?</p>
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Sí, eliminar</button>
+    <a href="{% url 'listar_propiedades' %}">Cancelar</a>
+</form>
+{% endblock %}

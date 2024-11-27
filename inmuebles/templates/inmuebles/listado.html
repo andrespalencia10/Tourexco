@@ -7,22 +7,16 @@
 <p>Aquí puedes explorar las propiedades que tenemos para ti:</p>
 
 <div class="propiedades">
-    <div class="propiedad">
-        <h3>Casa en venta</h3>
-        <p>Ubicada en el centro de la ciudad</p>
-        <p><strong>Precio: $200,000,000</strong></p>
-    </div>
-
-    <div class="propiedad">
-        <h3>Apartamento en arriendo</h3>
-        <p>Zona norte de la ciudad</p>
-        <p><strong>Precio: $1,500,000/mes</strong></p>
-    </div>
-
-    <div class="propiedad">
-        <h3>Terreno en venta</h3>
-        <p>En la costa, ideal para desarrollo</p>
-        <p><strong>Precio: $300,000,000</strong></p>
-    </div>
+    {% for propiedad in propiedades %}
+        <div class="propiedad">
+            <h3>{{ propiedad.titulo }}</h3>
+            <p>{{ propiedad.descripcion }}</p>
+            <p><strong>Ubicación:</strong> {{ propiedad.ubicacion }}</p>
+            <p><strong>Precio:</strong> ${{ propiedad.precio }}</p>
+            <a href="#">Ver más detalles</a>
+        </div>
+    {% empty %}
+        <p>No hay inmuebles disponibles en este momento.</p>
+    {% endfor %}
 </div>
 {% endblock %}

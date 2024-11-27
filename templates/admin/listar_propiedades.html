@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Listado de Propiedades</h1>
+<a href="{% url 'crear_propiedad' %}">Nueva Propiedad</a>
+<table>
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Precio</th>
+            <th>Ubicación</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for propiedad in propiedades %}
+        <tr>
+            <td>{{ propiedad.titulo }}</td>
+            <td>{{ propiedad.precio }}</td>
+            <td>{{ propiedad.ubicacion }}</td>
+            <td>
+                <a href="{% url 'editar_propiedad' propiedad.id_propiedad %}">Editar</a>
+                <form action="{% url 'eliminar_propiedad' propiedad.id_propiedad %}" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

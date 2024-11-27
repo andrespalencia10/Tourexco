@@ -89,10 +89,15 @@ WSGI_APPLICATION = 'tourexco.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',  # Cambia esto si usas otro motor
+        'NAME': 'inmuebles',  # Nombre de tu base de datos
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',  # O el host de tu servidor
+        'PORT': '5433',  # Puerto para PostgreSQL
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
