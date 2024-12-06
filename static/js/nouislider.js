@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
 
 (function (factory) {
@@ -1451,7 +1450,11 @@ function closure ( target, options ){
 
 		// Find the handle closest to the tapped position.
 		handleNumber = ( location < total/2 || scope_Handles.length === 1 ) ? 0 : 1;
-		
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 4f70ec1 (subiendo visual)
 		// Check if handler is not disablet if yes set number to the next handler
 		if (scope_Handles[handleNumber].hasAttribute('disabled')) {
 			handleNumber = handleNumber ? 0 : 1;
@@ -1897,6 +1900,7 @@ function closure ( target, options ){
 		create: initialize
 	};
 
+<<<<<<< HEAD
 =======
 /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
 
@@ -3350,7 +3354,7 @@ function closure ( target, options ){
 
 		// Find the handle closest to the tapped position.
 		handleNumber = ( location < total/2 || scope_Handles.length === 1 ) ? 0 : 1;
-		
+
 		// Check if handler is not disablet if yes set number to the next handler
 		if (scope_Handles[handleNumber].hasAttribute('disabled')) {
 			handleNumber = handleNumber ? 0 : 1;
@@ -3797,4 +3801,6 @@ function closure ( target, options ){
 	};
 
 >>>>>>> 529480b (start with fixes)
+=======
+>>>>>>> 4f70ec1 (subiendo visual)
 }));
