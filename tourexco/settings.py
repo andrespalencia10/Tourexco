@@ -92,9 +92,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',  # Cambia esto si usas otro motor
         'NAME': 'inmuebles',  # Nombre de tu base de datos
         'USER': 'postgres',
-        'PASSWORD': 'password',
+        'PASSWORD': 'postgres',
         'HOST': 'localhost',  # O el host de tu servidor
-        'PORT': '5433',  # Puerto para PostgreSQL
+        'PORT': '5432',  # Puerto para PostgreSQL
     }
 }
 
