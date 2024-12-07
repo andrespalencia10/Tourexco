@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Tourexco{% endblock %}</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Tourexco
+      {% endblock %}
+    </title>
 
-        <!-- Cargar el tag de archivos estáticos -->
-        {% load static %}
+    <!-- Cargar el tag de archivos estáticos -->
+    {% load static %}
 
-        <!-- Enlace al archivo CSS -->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
 
-        <!-- Font awesome -->
-        <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-        <!-- slick slider -->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}">
-        <!-- price picker slider -->
-        <link rel="stylesheet" type="text/css" href="{% static 'css/nouislider.css' %}">
-        <!-- Fancybox slider -->
-        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" type="text/css" media="screen" />
-        <!-- Theme color -->
-        <link id="switcher" href="{% static 'css/theme-color/default-theme.css' %}" rel="stylesheet">
+    <!-- Font awesome -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slick.css' %}" />
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nouislider.css' %}" />
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="{% static 'css/theme-color/default-theme.css' %}" rel="stylesheet" />
 
-        <!-- Main style sheet -->
-        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link id="switcher" href="{% static 'css/nosotros.css' %}" rel="stylesheet" />
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    </head>
+    <!-- Main style sheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+  </head>
 
   <body class="aa-price-range">
     <!-- Pre Loader -->
@@ -42,7 +48,7 @@
       <div class="pulse"></div>
     </div>
     <!-- SCROLL TOP BUTTON -->
-      <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
     <!-- END SCROLL TOP BUTTON -->
 
     <!-- Start header section -->
@@ -77,42 +83,52 @@
     </header>
     <!-- End header section -->
 
-      <!-- Start menu section -->
-  <section id="aa-menu-area">
-    <nav class="navbar navbar-default main-navbar" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <!-- LOGO -->
-          <!-- Text based logo -->
-           <a class="navbar-brand aa-logo" href="index.html"><span>Tourexco</span></a>
-           <!-- Image based logo -->
-           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+    <!-- Start menu section -->
+    <section id="aa-menu-area">
+      <nav class="navbar navbar-default main-navbar" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- LOGO -->
+            <!-- Text based logo -->
+            <a class="navbar-brand aa-logo" href="index.html"><span>Tourexco</span></a>
+            <!-- Image based logo -->
+            <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+              <li class="active">
+                <a href="{% url 'inicio' %}">Inicio</a>
+              </li>
+              <li>
+                <a href="{% url 'inmuebles' %}">Inmuebles</a>
+              </li>
+              <li>
+                <a href="{% url 'nosotros' %}">Nosotros</a>
+              </li>
+              <li>
+                <a href="{% url 'contacto' %}">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <!-- /.nav-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li class="active"><a href="{% url 'inicio' %}">Inicio</a> </li>
-            <li><a href="{% url 'inmuebles' %}">Inmuebles</a></li>
-            <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
-           <li><a href="{% url 'contacto' %}">Contacto</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-  </section>
-  <!-- End menu section -->
+      </nav>
+    </section>
 
-  <!-- End slider  -->
+    <!-- End menu section -->
 
-<!-- <body> -->
+    <!-- End slider -->
 
-    <!-- <header>
+    <!-- <body> -->
+
+    <!--  <header>
         <h1>Tourexco Inmobiliaria</h1>
         <nav>
             <a href="{% url 'inicio' %}">Inicio</a>
@@ -120,19 +136,19 @@
             <a href="{% url 'nosotros' %}">Nosotros</a>
             <a href="{% url 'contacto' %}">Contacto</a>
         </nav>
-    </header> -->
+    </header>  -->
 
     <!-- Bloque para contenido específico -->
-    <!-- {% block content %}
-    {% endblock %} -->
+    <!--  {% block content %}
+    {% endblock %}  -->
 
-    <!-- <footer>
+    <!--  <footer>
         <p>&copy; 2024 Tourexco Inmobiliaria. Todos los derechos reservados.</p>
-    </footer> -->
-<!-- </body> -->
+    </footer>  -->
+    <!-- </body> -->
 
     <!-- jQuery library -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{% static 'js/bootstrap.js' %}"></script>
@@ -146,5 +162,5 @@
     <script type="text/javascript" src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
     <!-- Custom js -->
     <script src="{% static 'js/custom.js' %}"></script>
-    </body>
+  </body>
 </html>
