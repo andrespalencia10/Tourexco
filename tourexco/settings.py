@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from pathlib import Path
 
+# Define config
+from decouple import config
+
+
 # Define el directorio base de tu proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -90,11 +94,11 @@ WSGI_APPLICATION = 'tourexco.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Cambia esto si usas otro motor
-        'NAME': 'inmuebles',  # Nombre de tu base de datos
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'localhost',  # O el host de tu servidor
-        'PORT': '5432',  # Puerto para PostgreSQL
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD':  config('DATABASE_PASSWORD'),
+        'HOST': config('DATABASE_HOST'),
+        'PORT': config('DATABASE_PORT'),
     }
 }
 
