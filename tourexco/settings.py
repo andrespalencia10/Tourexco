@@ -16,7 +16,6 @@ from pathlib import Path
 # Define config
 from decouple import config
 
-
 # Define el directorio base de tu proyecto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -141,3 +140,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Email configuration
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS')
+EMAIL_USE_SSL = config('EMAIL_USE_SSL')
+EMAIL_USER = config('EMAIL_USER')
+EMAIL_PASSWORD = config('EMAIL_PASSWORD')
